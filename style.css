@@ -1,0 +1,97 @@
+* {
+    background-color: lightblue;
+}
+
+#gameOver {
+    display: flex;
+    display: none;
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    margin: auto;
+    position: absolute;
+    overflow: hidden;
+    background-image: url(intergalacticbackground.png);
+    background-size: cover;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    /* https://codepen.io/argyleink/pen/OJMEpGp */
+    background: linear-gradient( to right, hsl(98 100% 62%), hsl(204 100% 59%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 10vmin;
+    font-family: system-ui;
+    font-size: min(200%, 5vmin);
+}
+
+#game {
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    background-image: url(intergalacticbackground.png);
+    background-size: cover;
+}
+
+.hide {
+    display: none;
+}
+
+.gameDark {
+    background: hsl(204 100% 5%);
+}
+
+#block {
+    width: 50px;
+    height: 500px;
+    background-color: rgb(22, 136, 22);
+    position: relative;
+    left: 600px;
+    animation: block 2s infinite linear;
+}
+
+@keyframes block {
+    0% {
+        left: 500px
+    }
+    100% {
+        left: -50px
+    }
+}
+
+#hole {
+    width: 50px;
+    height: 150px;
+    background-image: url(intergalacticbackground.png);
+    position: relative;
+    left: 400px;
+    top: -500px;
+    animation: block 2s infinite linear;
+}
+
+#character {
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 100px;
+    left: 50px
+}
+
+#animatedfloor {
+    z-index: 2;
+    width: 600px;
+    position: relative;
+    bottom: 200px;
+    animation: block 2s infinite linear;
+}
+
+#unanimatedfloor {
+    z-index: 1;
+    height: 50.21px;
+    position: relative;
+    bottom: 254px;
+}
